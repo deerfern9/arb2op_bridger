@@ -1,11 +1,12 @@
 wallets_delay = (300, 900)
 
-# enter slippage as shown => 1 = 0.1%, 5 = 0.5%, 10 = 1%
-SLIPPAGE = 5
+SLIPPAGE = 5                # enter slippage as shown => 1 = 0.1%, 5 = 0.5%, 10 = 1%
 percent_to_bridge = 100
+max_gwei = 20               # max gwei in ethereum network
 
 # RPCs
-arbitrum_rpc_url = 'https://arbitrum.blockpi.network/v1/rpc/public'
+arbitrum_rpc = 'https://arbitrum.blockpi.network/v1/rpc/public'
+ethereum_rpc = 'https://ethereum.blockpi.network/v1/rpc/public'
 
 stargate_arbitrum_address = '0x53Bf833A5d6c4ddA888F69c22C88C9f356a41614'
 stargate_arbitrum_eth_address = '0xbf22f0f184bCcbeA268dF387a49fF5238dD23E40'
