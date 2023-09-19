@@ -83,10 +83,8 @@ def bridge_arbitrum_optimism(account, amount):
 def main():
     privates = read_file('privates.txt')
     for private in privates:
-        eth_gwei = web3.from_wei(eth_web3.eth.gas_price, 'gwei')
-        print(eth_gwei)
-        while eth_gwei > max_gwei:
-            new_print('INFO', f"Current gas fee {eth_gwei} gwei > {max_gwei} gwei. Waiting for 17 seconds...")
+        while web3.from_wei(eth_web3.eth.gas_price, 'gwei') > max_gwei:
+            new_print('INFO', f"Current gas fee {web3.from_wei(eth_web3.eth.gas_price, 'gwei')} gwei > {max_gwei} gwei. Waiting for 17 seconds...")
             time.sleep(17)
 
         try:
